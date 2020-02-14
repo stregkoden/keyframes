@@ -1,7 +1,7 @@
 # CS:GO Keyframe Smoothing Script [![ver][]](https://github.com/samisalreadytaken/keyframes)
 Create professional smooth cameras live in-game, in mere seconds.
 
-You can manipulate your keyframes as you wish. You can save your keyframes, or your compiled paths to return to them at a later time.
+You can manipulate any keyframe at any time. You can save your keyframes, or your compiled paths to come back to them at a later time.
 
 [ver]: https://img.shields.io/badge/keyframes-v1.0.0-informational
 [![](https://img.shields.io/badge/Video_demonstration-red?logo=youtube)](https://www.youtube.com/watch?v=pc1wvx5LUog)
@@ -9,7 +9,7 @@ You can manipulate your keyframes as you wish. You can save your keyframes, or y
 ## Installation
 Merge the `/csgo/` folder with your `/steamapps/common/Counter-Strike Global Offensive/csgo/` folder.
 
-This only adds 8 files to your /csgo/ folder. It does not overwrite any game files, and it does not interfere with the game in any way. It is 100% VAC safe, and you can only use this script on your own server.
+This only adds 8 files to your /csgo/ folder. It does not overwrite any game files, and it does not interfere with the game in any way. It is VAC safe, and you can only use this script on your own server.
 
 ### Downloading
 **Method 1.** Manually download the repo by clicking [**HERE**](https://github.com/samisalreadytaken/keyframes/archive/master.zip). Then extract the folder.
@@ -22,9 +22,9 @@ cd "W:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensiv
 ## Usage
 Use the console commands to load and control the script. You need to load it each time you change the map.
 
-Optionally, bind your keys to the commands to improve your workflow. You can find some examples at the bottom of the [keyframes.cfg](csgo/cfg/keyframes.cfg) file.
+Optionally, bind your keys to improve your workflow. You can find some examples at the bottom of the [keyframes.cfg](csgo/cfg/keyframes.cfg) file.
 
-Before uncommenting the keyboard binds in the config file, make sure you have a backup of your config.
+Before uncommenting the keyboard binds in the config file, make sure you have a backup of your own config.
 
 Command               | Description
 --------------------- | -------------------
@@ -38,8 +38,7 @@ Command               | Description
 `kf_replace_undo`     | Undo last replace action
 ---                   | ---
 `script fovs(time)`   | Modify the time of the FOV key of the selected key
-`script fov(val,time)`| Add new FOV data to the selected key (Using the ARROW keys, and fovs() is suggested)
----                   | ---
+`script fov(val,time)`| Add new FOV data to the selected key (Using the ARROW keys and fovs() is suggested)
 `kf_removefov`        | Remove the FOV data from the selected key
 ---                   | ---
 `kf_compile`          | Compile the keyframe data
@@ -75,7 +74,7 @@ Keyboard Binds        | Description
 `C`        | `kf_replace`
 
 ### Exported file
-You can open the exported file (`.log`) with any text editor. You must replace `L ` with blank, i.e. remove, for the data to work. Once you have cleared the exported file, copy and paste it in the `keyframes_data.nut` file, which you can also open with any text editor. You can name the data anything you want, so you can store as much data as you want, and load any at any time.
+You can open the exported file (`.log`) with any text editor. You must replace `L ` with blank, i.e. remove, for the data to work. Once you have cleared the exported file, copy and paste it in the `keyframes_data.nut` file, which you can also open with any text editor. You can name the data anything you want. You can store as much data as you want, and load any at any time.
 
 ## Changelog
 _[Library][vs_library] changes are excluded._
