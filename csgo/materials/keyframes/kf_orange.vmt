@@ -1,0 +1,5 @@
+"unlitgeneric"
+{
+	"$basetexture"	"keyframes/kf_orange"
+	"$translucent"	1
+}
