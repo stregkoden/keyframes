@@ -3,7 +3,7 @@ Create professional smooth cameras live in-game, in mere seconds.
 
 You can manipulate any keyframe at any time. You can save your keyframes, or your compiled paths to come back to them at a later time.
 
-[ver]: https://img.shields.io/badge/keyframes-v1.0.0-informational
+[ver]: https://img.shields.io/badge/keyframes-v1.0.1-informational
 [![](https://img.shields.io/badge/Video_demonstration-red?logo=youtube)](https://www.youtube.com/watch?v=pc1wvx5LUog)
 
 ## Installation
@@ -24,7 +24,7 @@ Use the console commands to load and control the script. You need to load it eac
 
 Optionally, bind your keys to improve your workflow. You can find some examples at the bottom of the [keyframes.cfg](csgo/cfg/keyframes.cfg) file.
 
-Before uncommenting the keyboard binds in the config file, make sure you have a backup of your own config.
+Before uncommenting the key binds in the config file, make sure you have a backup of your own config.
 
 Command               | Description
 --------------------- | -------------------
@@ -42,7 +42,7 @@ Command               | Description
 `kf_removefov`        | Remove the FOV data from the selected key
 ---                   | ---
 `kf_compile`          | Compile the keyframe data
-`kf_play`             | Play compiled data
+`kf_play`             | Play the compiled data
 `kf_stop`             | Stop playback
 `kf_save`             | Save the compiled data
 `kf_savekeys`         | Save the keyframe data
@@ -60,24 +60,28 @@ Command               | Description
 ---                   | ---
 `kf_cmd`              | List all commands
 
-Keyboard Binds        | Description
---------------------- | -------------------
+Key Binds                 | Description
+------------------------- | -------------------
 `RIGHTARROW` / `LEFTARROW`| Set camera roll
 `UPARROW` / `DOWNARROW`   | Set camera FOV. Use `script fovs()` to modify time
-`MOUSE1`   | `kf_add`
-`MOUSE2`   | `kf_remove`
-`Q`        | `kf_prev`
-`E`        | `kf_next`
-`F`        | `kf_select`
-`G`        | `kf_see`
-`X`        | `kf_insert`
-`C`        | `kf_replace`
+`MOUSE1`                  | `kf_add`
+`MOUSE2`                  | `kf_remove`
+`Q`                       | `kf_prev`
+`E`                       | `kf_next`
+`F`                       | `kf_select`
+`G`                       | `kf_see`
+`X`                       | `kf_insert`
+`C`                       | `kf_replace`
 
 ### Exported file
 You can open the exported file (`.log`) with any text editor. You must replace `L ` with blank, i.e. remove, for the data to work. Once you have cleared the exported file, copy and paste it in the `keyframes_data.nut` file, which you can also open with any text editor. You can name the data anything you want. You can store as much data as you want, and load any at any time.
 
 ## Changelog
 _[Library][vs_library] changes are excluded._
+
+#### 2020-02-15 [v1.0.1]
+\- Fixed an old bug that wouldn't compile the last key  
+\- Minor corrections and fixes
 
 #### 2020-02-14 [v1.0.0]
 \- Initial release
