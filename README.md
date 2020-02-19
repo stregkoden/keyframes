@@ -14,11 +14,17 @@ Merge the `/csgo/` folder with your `/steamapps/common/Counter-Strike Global Off
 This only adds 8 files to your /csgo/ folder. It does not overwrite any game files, and it does not interfere with the game in any way. It is VAC safe, and you can only use this script on your own server.
 
 ### Downloading
-**Method 1.** Manually download the repo by clicking [**HERE**](https://github.com/samisalreadytaken/keyframes/archive/master.zip). Then extract the folder.
+**Method 1.**
+Manually download the repo by clicking [**HERE**](https://github.com/samisalreadytaken/keyframes/archive/master.zip). Then extract the folder.
 
-**Method 2.** Using [curl](https://github.com/curl/curl), use the following line to download the script directly into your game files.
+**Method 2.**
+On Windows 10 17063 or later, run the [`install_keyframes.bat`](https://raw.githubusercontent.com/samisalreadytaken/keyframes/master/install_keyframes.bat) file to automatically download the script into your game files. You can also use it to update the script.
+
+**Method 3.**
+Using bash, after changing the directory below to your Steam directory, use the following commands to install the script into your game files.
 ```
-cd "W:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/";curl https://codeload.github.com/samisalreadytaken/keyframes/tar.gz/master | tar --no-overwrite-dir -xz --strip=1 keyframes-master/csgo
+cd "C:/Program Files/Steam/steamapps/common/Counter-Strike Global Offensive/" && 
+curl https://codeload.github.com/samisalreadytaken/keyframes/tar.gz/master | tar -xz --strip=1 keyframes-master/csgo
 ```
 
 ## Usage
@@ -30,6 +36,8 @@ Before uncommenting the key binds in the config file, make sure you have a backu
 
 Command                | Description
 ---------------------- | -------------------
+`exec keyframes`       | Load the script
+---                    | ---
 `kf_add`               | Add new keyframe
 `kf_remove`            | Remove the selected key
 `kf_remove_undo`       | Undo last remove action
