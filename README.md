@@ -5,7 +5,7 @@ Create professional smooth cameras live in-game, in mere seconds.
 
 You can manipulate any keyframe at any time. You can save your keyframes, or your compiled paths to come back to them at a later time.
 
-[ver]: https://img.shields.io/badge/keyframes-v1.1.3-informational
+[ver]: https://img.shields.io/badge/keyframes-v1.1.4-informational
 [![](https://img.shields.io/badge/Video_demonstration-red?logo=youtube)](https://www.youtube.com/watch?v=pc1wvx5LUog)
 
 ## Installation
@@ -98,6 +98,9 @@ Modifying the position or angle data, including camera tilts, of any key require
 
 ## Changelog
 _[Library][vs_library] changes are excluded._
+
+#### 2020-02-23 [v1.1.4]
+\- Bug fixes
 
 #### 2020-02-22 [v1.1.3]
 \- Changed the gizmo helper to a circle sprite  
