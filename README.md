@@ -1,12 +1,12 @@
 # CS:GO Keyframe Smoothing Script
 [![ver][]](https://github.com/samisalreadytaken/keyframes)
 
-Create professional smooth cameras live in-game, in mere seconds.
+Create smooth camera paths live in-game, in mere seconds.
 
 You can manipulate any keyframe at any time. You can save your keyframes, or your compiled paths to come back to them at a later time.
 
 [ver]: https://img.shields.io/badge/keyframes-v1.1.4-informational
-[![](https://img.shields.io/badge/Video_demonstration-red?logo=youtube)](https://www.youtube.com/watch?v=pc1wvx5LUog)
+[![](https://img.shields.io/badge/Video_demonstration-red?logo=youtube)](https://www.youtube.com/watch?v=NDczxKqJECY)
 
 ## Installation
 Merge the `/csgo/` folder with your `/steamapps/common/Counter-Strike Global Offensive/csgo/` folder.
