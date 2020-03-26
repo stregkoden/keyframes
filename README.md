@@ -5,7 +5,7 @@ Create smooth camera paths live in-game, in mere seconds.
 
 You can manipulate any keyframe at any time. You can save your keyframes, or your compiled paths to come back to them at a later time.
 
-[ver]: https://img.shields.io/badge/keyframes-v1.1.4-informational
+[ver]: https://img.shields.io/badge/keyframes-v1.1.5-informational
 [![](https://img.shields.io/badge/Video_demonstration-red?logo=youtube)](https://www.youtube.com/watch?v=NDczxKqJECY)
 
 ## Installation
@@ -32,7 +32,7 @@ Use the console commands to load and control the script. You need to load it eac
 
 See the _Default Key Binds_ section below for the keys that are available for you to use by default. These do not modify your settings. Optionally, bind your other keys to improve your workflow. You can find some examples at the bottom of the [keyframes.cfg](csgo/cfg/keyframes.cfg) file.
 
-Before uncommenting the key binds in the config file, make sure you have a backup of your own config.
+Before uncommenting the key binds in the config file, make sure you have a backup of your own binds that would be modified.
 
 Command                | Description
 ---------------------- | -------------------
@@ -53,7 +53,7 @@ Command                | Description
 `kf_save`              | Save the compiled data
 `kf_savekeys`          | Save the keyframe data
 ---                    | ---
-`kf_mode_angle`        | Toggle stabilised angles algorithm (no camera tilt)
+`kf_mode_angle`        | Toggle stabilised angles algorithm (no camera roll)
 ---                    | ---
 `kf_edit`              | Toggle edit mode
 `kf_select`            | In edit mode, hold the current selection
@@ -64,7 +64,7 @@ Command                | Description
 `kf_showpath`          | In edit mode, toggle showing the path
 ---                    | ---
 `script fov(val)`      | Set FOV data on the selected key
-`script tilt(val)`     | Set camera tilt on the selected key
+`script roll(val)`     | Set camera roll on the selected key
 ---                    | ---
 `script load(input)`   | Load new data from file
 ---                    | ---
@@ -75,7 +75,7 @@ Default Key Binds    | Command                        | Game command to listen
 `MOUSE1`             | `kf_add`                       | `+attack`
 `MOUSE2`             | `kf_remove`                    | `+attack2`
 `E`                  | `kf_see`                       | `+use`
-`A` / `D`            | (In see mode) Set camera tilt  | `+moveleft` / `+moveright`
+`A` / `D`            | (In see mode) Set camera roll  | `+moveleft` / `+moveright`
 `W` / `S`            | (In see mode) Set camera FOV   | `+forward` / `+back`
 `MOUSE1`             | (In see mode) `kf_next`        | `+attack`
 `MOUSE2`             | (In see mode) `kf_prev`        | `+attack2`
@@ -94,10 +94,15 @@ Position and angle values are interpolated using Catmull-Rom splines between two
 
 FOV values are linearly interpolated between two consecutive _FOV keys_, independent of the pos-ang keys. Thus, FOV keys on the very first (KEY 0) and the very last keys are discarded. The playback starts with FOV set to data on KEY 1. If KEY 1 FOV data is omitted, KEY 1 FOV is set to 90.
 
-Modifying the position or angle data, including camera tilts, of any key requires compilation before seeing the changes in playback. Whereas for FOV datas, the user can see their changes in playback without having to recompile.
+Modifying the position or angle data, including camera roll, of any key requires compilation before seeing the changes in playback. Whereas for FOV datas, the user can see their changes in playback without having to recompile.
 
 ## Changelog
 _[Library][vs_library] changes are excluded._
+
+#### 2020-03-25 [v1.1.5]
+\- Changed the log output directory to `/csgo/scripts/vscripts/`, as the file that reads the data is also in that directory.
+
+<details><summary>See more</summary>
 
 #### 2020-02-23 [v1.1.4]
 \- Bug fixes
@@ -108,15 +113,13 @@ _[Library][vs_library] changes are excluded._
 \- Minor backend improvements  
 \- Edge case bug fixes
 
-<details><summary>See more</summary>
-
 #### 2020-02-17 [v1.1.1]
 \- Minor performance improvements  
 \- Minor bug fixes
 
 #### 2020-02-16 [v1.1.0]
 \- Added back an old FOV system that lerps between 2 keyframe FOV values  
-\- Changed 'roll' to 'tilt'  
+\- ~~Changed 'roll' to 'tilt'~~ (Reverted 2020-03-23)  
 \- Decreased edit mode response time  
 \- Minor improvements
 
