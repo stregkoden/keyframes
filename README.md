@@ -92,7 +92,7 @@ You can open the exported file (`.log`) with any text editor. You must replace `
 ### Implementation notes
 Position and angle values are interpolated using Catmull-Rom splines between two consecutive keyframes.
 
-FOV values are linearly interpolated between two consecutive _FOV keys_, independent of the pos-ang keys. Thus, FOV keys on the very first (KEY 0) and the very last keys are discarded. The playback starts with FOV set to data on KEY 1. If KEY 1 FOV data is omitted, KEY 1 FOV is set to 90.
+FOV values are linearly interpolated between two consecutive _FOV keys_, independent of the pos-ang keys. Thus, the FOV data on the very first (KEY 0) key is discarded. The playback starts with FOV set to data on KEY 1. If KEY 1 FOV data is omitted, KEY 1 FOV is set to 90.
 
 Modifying the position or angle data, including camera roll, of any key requires compilation before seeing the changes in playback. Whereas for FOV datas, the user can see their changes in playback without having to recompile.
 
