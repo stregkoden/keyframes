@@ -5,7 +5,7 @@ Create smooth camera paths live in-game, in mere seconds.
 
 You can manipulate any keyframe at any time. You can save your keyframes, or your compiled paths to come back to them at a later time.
 
-[ver]: https://img.shields.io/badge/keyframes-v1.1.5-informational
+[ver]: https://img.shields.io/badge/keyframes-v1.1.6-informational
 [![](https://img.shields.io/badge/Video_demonstration-red?logo=youtube)](https://www.youtube.com/watch?v=NDczxKqJECY)
 
 ## Installation
@@ -98,6 +98,9 @@ Modifying the position or angle data, including camera roll, of any key requires
 
 ## Changelog
 _[Library][vs_library] changes are excluded._
+
+#### 2020-04-25 [v1.1.6]
+\- Minor edits to conform to library changes.
 
 #### 2020-03-25 [v1.1.5]
 \- Changed the log output directory to `/csgo/scripts/vscripts/`, as the file that reads the data is also in that directory.
